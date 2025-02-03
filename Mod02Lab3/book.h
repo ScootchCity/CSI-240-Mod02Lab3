@@ -17,7 +17,7 @@ using namespace std;
 enum Type
 {
 	UNKNOWN = -1,
-   PAPERBACK,
+	PAPERBACK,
 	HARDBACK
 };
 

@@ -1,4 +1,5 @@
 #include "book.h"
+#include <iostream>
 
 Book::Book()
 {
@@ -27,5 +28,8 @@ float Book::getWeightLbs() //calculate and return the weight of the book in lbs
 
 string Book::getTypeName() //return the string which correlates with the book type
 {
-	
+	string typeStr = "null";
+	cout << bType << endl;
+
+	return typeStr;
 }

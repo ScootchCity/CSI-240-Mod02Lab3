@@ -19,11 +19,15 @@ int main()
 	const string FILENAME("books.txt");
    
 	ifstream input(FILENAME);
+
+	int i = 0;
    
 	if( input.good() )
 	{
 		while( !input.eof() )
 		{
+			i++;
+			string bookName = "book" + i;
 			string name;
 			int type;
 			int pages;
@@ -33,7 +37,7 @@ int main()
 			input.ignore(INT_MAX, '\n');  //ignore the newline char at the end of the line
          
 			//create Book object here!
-			
+			Book bookName = new Book();
          
 			//write out report line for movie here!
 			
