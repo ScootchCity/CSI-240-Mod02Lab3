@@ -21,7 +21,7 @@ enum Type
 	HARDBACK
 };
 
-const string TYPE_WORDS[] = { "Paperback", "Hardback" };
+const string TYPE_WORDS[] = {"Paperback", "Hardback"};
 
 class Book
 {
@@ -29,7 +29,7 @@ public:
 	//default constructor - not actually used but should be implemented anyway
 	Book();
 	//constructor
-	Book( const string& name, Type type, int pages, float ounces );
+	Book(const string& name, Type type, int pages, float ounces);
 	//destructor
 	~Book(){};
    
@@ -38,10 +38,10 @@ public:
 	string getTypeName();  //return the string which correlates with the book type
    
 	//accessors
-	string getName(){ return bName; };
-	Type getType(){ return bType; };
-	int getPages(){ return bPages; };
-	float getOunces(){ return bOunces; };
+	string getName(){return bName;};
+	Type getType(){return bType;};
+	int getPages(){return bPages;};
+	float getOunces(){return bOunces;};
    
 private:
 	string bName;  //name of the book

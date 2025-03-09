@@ -24,23 +24,32 @@ int main()
    
 	if( input.good() )
 	{
-		while( !input.eof() )
+		while(!input.eof())
 		{
 			i++;
-			string bookName = "book" + i;
+			//string bookName = "book" + i;
 			string name;
-			int type;
+			int typeInt = -1;
 			int pages;
+			Type type = UNKNOWN;
 			float ounces;
-			getline( input, name );
-			input >> type >> pages >> ounces;
+			getline(input, name);
+			input >> typeInt >> pages >> ounces;
 			input.ignore(INT_MAX, '\n');  //ignore the newline char at the end of the line
-         
+
+			if (typeInt == 0) {
+				type = PAPERBACK;
+			}
+			else if(typeInt == 1) {
+				type = HARDBACK;
+			}
+
 			//create Book object here!
-			Book bookName = new Book();
-         
+			Book ourBook(name, type, pages, ounces);
+
 			//write out report line for movie here!
-			
+			string reportLine = ourBook.formatReportLine();
+			cout << reportLine;
          
 		}
 	}
